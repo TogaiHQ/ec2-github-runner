@@ -35,6 +35,10 @@ inputs:
       Set this to false if you want On Demand EC2 instances and not Spot instances. Default value is true
     required: false
     default: 'false'
+  key-name:
+    description: >-
+      Key pair to be associated with the EC2 instance.
+    required: false
   subnet-id:
     description: >-
       VPC Subnet Id. The subnet should belong to the same VPC as the specified security group.
