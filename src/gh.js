@@ -52,7 +52,7 @@ async function removeRunner() {
 }
 
 async function waitForRunnerRegistered(label) {
-  const timeoutMinutes = 5;
+  const timeoutMinutes = 10; // Increasing the wait time to 10mins as the EC2 instance took 6mins to start - Tholkappiyan
   const retryIntervalSeconds = 10;
   const quietPeriodSeconds = 30;
   let waitSeconds = 0;
