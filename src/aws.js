@@ -68,6 +68,10 @@ async function startEc2Instance(label, githubRegistrationToken) {
     ]
   };
 
+  if (!!config.input.keyName) {
+    params.KeyName = config.input.keyName
+  }
+
   if (config.input.isSpotInstance) {
     params.InstanceMarketOptions = {
       MarketType: 'spot',

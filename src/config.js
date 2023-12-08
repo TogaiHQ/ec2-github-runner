@@ -16,7 +16,8 @@ class Config {
       runnerHomeDir: core.getInput('runner-home-dir'),
       preRunnerScript: core.getInput('pre-runner-script'),
       assignPublicIpToInstance: core.getBooleanInput('assign-public-ip-to-instance'),
-      isSpotInstance: core.getBooleanInput('is-spot-instance')
+      isSpotInstance: core.getBooleanInput('is-spot-instance'),
+      keyName: core.getInput('key-name')
     };
 
     const tags = JSON.parse(core.getInput('aws-resource-tags'));
